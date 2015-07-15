@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+{% load static from staticfiles %}
+<head>
+    <meta http-equiv="Content-Type" content="text/html" charset="utf-8" />
+    <title>Get hash online</title>
+    <!--[if IE]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+    <link type="text/css" href="{% static 'css/hash.css' %}" rel="stylesheet">
+    <script type="text/javascript" src="{% static 'js/jquery.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/md5.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/sha1.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/sha224.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/sha256.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/sha384.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/sha512.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/hash.js' %}"></script>
+
+</head>
+    <body>
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="/">gethash.io</a>
+                </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <li><a href="/string"><span class="glyphicon glyphicon-pencil"></span> String</a></li>
+                        <li><a href="/text"><span class="glyphicon glyphicon-list"></span> Text</a></li>
+                        <li><a href="/file"><span class="glyphicon glyphicon-file"></span> File</a></li>
+                        <li><a href="/api"><span class="glyphicon glyphicon-sort"></span> API</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    {% block content %}{% endblock %}
+    </body>
+</html>

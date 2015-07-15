@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="col-xs-10 col-xs-offset-1">
+    <div class="panel panel-info">
+        <div class="panel-heading">
+        	Supported algorithms
+        </div>
+        <div class="panel-body">
+        	MD5, SHA1, SHA224, SHA256, SHA384, SHA512
+        </div>
+    </div>
+    <div class="panel panel-info">
+        <div class="panel-heading">
+        	Hash of the string
+        </div>
+        <div class="panel-body">
+        	<div>GET request to https://gethash.io/api/{algorithm}/{string}</div>
+        	<div>Response: JSON </div>
+        	<div>Example: </div>	
+        	<div>Request: https://gethash.io/api/md5/sometext </div>
+        	<div>Response: {"hash": "d41d8cd98f00b204e9800998ecf8427e", "success": true} </div>
+        </div>
+    </div>
+    <div class="panel panel-info">
+        <div class="panel-heading">
+        	Hash of the text
+        </div>
+        <div class="panel-body">
+        	<div>POST request to https://gethash.io/api/{algorithm}/</div>
+        	<div>Send JSON {'text': 'sometext\nanother line text\n\n\n'}</div>
+        	<div>Response: JSON </div>
+        	<div>Example: </div>	
+        	<div>Request: https://gethash.io/api/md5/{"text":"asd\nqwe\nzxc\n"} </div>
+        	<div>Response: {"hash": "4ef23dbc13334102765b14c9f5ac92be", "success": true} </div>
+        </div>
+    </div>
+    <div class="panel panel-info">
+        <div class="panel-heading">
+        	Files checksum
+        </div>
+        <div class="panel-body">
+        	Files checksum performs with the JS code on the client side, so you could hash large files without uploading it on server.
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,28 @@
+#input_box
+{
+	margin-top: 15%;
+}
+
+#input_text_box
+{
+    margin-top: 5%;
+}
+
+#hash_text_button
+{
+    width: 150px !important;
+}
+
+.result_div
+{
+    margin-top: 20px;
+    display: inline-block;
+    text-align: center;
+}
+
+#progress_text {
+    position: absolute;
+    display: block;
+    width: 100%;
+    color: black;
+}

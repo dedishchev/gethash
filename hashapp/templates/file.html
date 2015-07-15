@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="col-xs-6 col-xs-offset-3">
+
+    <div class="panel panel-info">
+        <div class="panel-heading">
+            <div class="input-group">
+                <div class="input-group-btn">
+                    <a class="btn btn-default dropdown-toggle" data-toggle="dropdown" href="#"> MD5 <span class="caret"></span></a>
+                    <ul class="dropdown-menu pull-left">
+                        <li><a href="#">MD5</a></li>
+                        <li><a href="#">SHA1</a></li>
+                        <li><a href="#">SHA224</a></li>
+                        <li><a href="#">SHA256</a></li>
+                        <li><a href="#">SHA384</a></li>
+                        <li><a href="#">SHA512</a></li>
+                    </ul>
+                    <button id="hash_file_button" type="button" class="btn btn-default" disabled="">Get hash</button>
+                    <input id="selected_file" type="file" style="display: none;">
+                    <div style="display: inline" class="input-append">
+                        <a class="btn" onclick="$('input[id=selected_file]').click();">Browse</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="fileinfo" class="panel-body" style="display: none;">
+            <div id="filename"></div>
+            <div id="filesize"></div>
+        </div>
+    </div>
+    <div class="progress" style="display: none;">
+        <div id="progressbar" class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 0%;"><span id="progress_text"></span></div>
+    </div>
+</div>
+
+<div class="col-xs-12">
+    <div class="container">
+        <div class="row" style="text-align: center">
+            <div class="alert alert-info result_div" role="alert"></div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
