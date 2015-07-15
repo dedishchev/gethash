@@ -60,5 +60,5 @@ target/
 .git/
 
 # Mac
-.DS_Store
+*.DS_Store
 
