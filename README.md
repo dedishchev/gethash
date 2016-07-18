@@ -1,4 +1,4 @@
-# gethash
+# hashapp
 Simple online service to get string, text and file hashes
 
 https://hash.us2h.com
